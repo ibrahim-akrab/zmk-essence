@@ -1,0 +1,11 @@
+file_format: "1"
+id: essence
+name: essence
+type: shield
+url: https://github.com/ibrahim-akrab/essence
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - essence_left
+  - essence_right
