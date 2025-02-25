@@ -5,3 +5,7 @@ config SHIELD_ESSENCE_LEFT
 # No whitespace after the comma or in your part name!
 config SHIELD_ESSENCE_RIGHT
     def_bool $(shields_list_contains,essence_right)
+
+# No whitespace after the comma or in your part name!
+config SHIELD_ESSENCE_DONGLE
+    def_bool $(shields_list_contains,essence_left_dongle)

@@ -1,4 +1,4 @@
-if SHIELD_ESSENCE_LEFT
+if SHIELD_ESSENCE_DONGLE
 
 # Name must be less than 16 characters long!
 config ZMK_KEYBOARD_NAME
@@ -7,9 +7,22 @@ config ZMK_KEYBOARD_NAME
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
 
+# Set this to the number of peripherals your dongle will have.
+# For a unibody, this would be 1. If you have left and right halves, set it to 2, etc.
+config ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS
+    default 2
+
+# Set this to ZMK_SPLIT_BLE_CENTRAL_PERIPHERALS + your desired number of BT profiles (default is 5)
+config BT_MAX_CONN
+    default 6
+
+# Set this to the same number as BT_MAX_CONN
+config BT_MAX_PAIRED
+    default 6
+
 endif
 
-if SHIELD_ESSENCE_LEFT || SHIELD_ESSENCE_RIGHT
+if SHIELD_ESSENCE_LEFT || SHIELD_ESSENCE_RIGHT || SHIELD_ESSENCE_DONGLE
 
 config ZMK_SPLIT
     default y
