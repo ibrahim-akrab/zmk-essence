@@ -23,5 +23,3 @@ include:
     shield: essence_left
   - board: nice_nano_v2
     shield: essence_right
-  - board: nice_nano_v2
-    shield: essence_dongle
